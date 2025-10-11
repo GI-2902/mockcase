@@ -1,0 +1,77 @@
+.auth__header{
+    background-color: black;
+}
+
+.auth__header__inner{
+    margin:0 auto;
+    max-width:1515px;
+    height:82px;   
+}
+
+.auth__header__logo{
+    padding: 22px 0px 0px 25px ;
+    color:#fff;
+    font-weight: bold;
+    font-size:30px;
+    display:inline-block;
+    width:370px;
+    height:36px;
+}
+
+.form{
+    width:680px;
+    height:656px;
+    text-align:center;
+    margin: 0 auto;
+
+    display:flex;
+    flex-direction:column;   
+}
+
+.form__group{
+    margin: 20px 0px;
+}
+
+.form__group__mail-label{
+    text-align:left;
+    font-size:24px;
+    font-weight: bold;
+}
+
+.form__group__mail-text input{
+    padding: 10px;
+    width:100%;
+    border: 1px solid #5f5f5f;
+    border-radius:4px;
+    box-sizing:border-box;
+}
+
+.form__group__pass-label{
+    text-align:left;
+    font-size:24px;
+    font-weight: bold;
+}
+
+.form__group__pass-text input{
+    padding: 10px;
+    width:100%;
+    border: 1px solid #5f5f5f;
+    border-radius:4px;
+    box-sizing:border-box;
+}
+
+.form__group__button input{
+    background-color:#ff5555; 
+    width:100%;
+    border: 1px solid #5f5f5f;
+    border-radius:5px;
+    height:65.25px;
+    font-size:26px;
+    font-weight:bold;
+    color:#ffff;
+}
+
+.form__group__register a{
+    font-size:20px;
+    color:#0073cc;  
+}

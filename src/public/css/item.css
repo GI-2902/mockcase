@@ -1,0 +1,262 @@
+.header{
+    background: #000000;
+    width:1512px;    
+}
+
+.header__inner{
+    margin:0 auto;
+    height:82px; 
+    display:flex;
+    align-items:center;
+    border:2px solid blue;
+}
+
+.header__inner__logo{
+    margin-left:40px;
+    width:370px;
+    height:36px;
+    background-image:url('../image/logo.svg');
+    background-repeat:no-repeat;
+}
+
+
+.header__inner__text{
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    width:563px;
+    height:100%;
+    position:absolute; 
+    left:475px; 
+}
+
+.header__inner__text input{ 
+    height:50px; 
+    width:500px; 
+    font-size:24px;
+}
+
+.header__inner__menu{
+    color:#ffff;
+    font-size:24px;
+    width:463px;
+    position:absolute; 
+    left:1049px; 
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header__inner__menu-logout-form{
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header__inner__menu-listing{
+    display:flex;
+    align-items:center;
+    width:100px;
+}
+
+.header__inner__menu-listing input{
+    background-color:white;
+    color:balck;
+    height:100%;
+    width:100%;
+    border-radius:4px;
+    font-size:24px;
+}
+
+.product{
+    margin:95px;
+    height:1704px;
+    display:flex;
+    justify-content:center;
+    
+}
+
+.product__img{
+    width:690px;
+}
+
+.product__img__pic{
+    display:flex;
+    justify-content:center;
+}
+
+.product__img__pic img{
+    width:600px;
+    height:600px;
+    margin:36px 0;
+    background-size:cover;
+}
+
+.product__area{
+    width:690px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.product__area__title{
+    height:253px;
+    width:570px;
+}
+
+.product__area__title-name{
+    height:77px;
+    font-size:45px;
+    font-weight:bold;
+}
+
+.product__area__title-bland{
+    font-size:20px;
+    height:28px;
+}
+
+.product__area__title-price{
+    font-size:30px;
+    height:45px;
+}
+
+.product__area__title-action{
+    height: 67px;
+    border:3px solid gold;
+}
+
+
+.product__buy{
+    height:100px;
+     display:flex;
+     align-items:center;
+}
+
+.product__buy-button{
+    width:570px;
+}
+
+.product__buy-button input{
+    width:100%;
+    height:56px;
+    background-color: red;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.product__descri{
+    height:321px;
+    width:570px;
+}
+
+.product__descri-title{
+    border:2px solid black;
+    width:559px;
+    height:74px;
+    font-size:36px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+}
+
+.product__descri-text{
+    border:2px solid blue;
+    width:559px;
+    height:247px;
+}
+.product__info{
+    height:230px;
+    width:570px;
+}
+
+.product__info-title{
+    border:2px solid red;
+    height:100px;
+    width:559px;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.product__info-category{
+    width:410px;
+    height:30px;
+    border:2px solid green;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.product__info-status{
+    border:2px solid yellow;
+    width:259px;
+    height:100px;
+    font-size:24px;
+    font-weight:bold;
+}
+.product__comment{
+
+    width:570px;
+    height:743px;
+
+}
+
+
+.product__comment-num{
+    border:2px solid red;
+    width:570px;
+    height:100px;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.product__comment-list{
+    border:2px solid paleturquoise;
+    width:570px;
+    height:200px;
+}
+
+.product__comment-input{
+    width:570px;
+    height:422px;
+}
+
+.product__comment-input-title{
+    width:570px;
+    height:50px;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.product__comment-input-area{
+
+    width:570px;
+    height:294px;
+}
+
+.product__comment-input-area textarea{
+    width:570px;
+    height:246px;
+}
+
+.product__comment-input-button{
+    width:570px;
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+.product__comment-input-button input{
+    font-size:25px;
+    width:100%;
+    font-weight:bold;
+    color:white;
+    background-color: red;
+    text-align:center;
+}
+
+
+

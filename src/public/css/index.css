@@ -1,0 +1,145 @@
+.header{
+    background: #000000;
+    width:1512px;    
+}
+
+.header__inner{
+    margin:0 auto;
+    height:82px; 
+    display:flex;
+    align-items:center;
+    border:2px solid blue;
+}
+
+.header__inner__logo{
+    margin-left:40px;
+    width:370px;
+    height:36px;
+    background-image:url('../image/logo.svg');
+    background-repeat:no-repeat;
+}
+
+
+.header__inner__text{
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    width:563px;
+    height:100%;
+    position:absolute; 
+    left:475px; 
+}
+
+.header__inner__text input{ 
+    height:50px; 
+    width:500px; 
+    font-size:24px;
+}
+
+.header__inner__menu{
+    color:#ffff;
+    font-size:24px;
+    width:463px;
+    position:absolute; 
+    left:1049px; 
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header__inner__menu-logout-form{
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header__inner__menu-listing{
+    display:flex;
+    align-items:center;
+    width:100px;
+}
+
+.header__inner__menu-listing input{
+    background-color:white;
+    color:balck;
+    height:100%;
+    width:100%;
+    border-radius:4px;
+    font-size:24px;
+}
+
+.toplist{
+    position:absolute;
+    top:127px;  
+}
+
+.toplist__tag{ 
+    border-bottom:2px solid #5f5f5f;    
+    height:47px;
+    width:1512px;
+    
+    display:flex;
+    align-items:center;
+}
+
+.toplist__tag-reco{
+    font-size:24px;
+    font-weight:bold;
+    position:absolute;
+    left:129px;
+    width:155px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:right;
+}
+
+.toplist__tag-mylist{
+    color:red;
+    font-size:24px;
+    font-weight:bold;
+    position:absolute;
+    left:336px;
+    width:155px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:right;
+}
+
+
+
+.item{
+    position:absolute;
+    left:69px;
+    top:250px;
+    width:1200px;
+    display:flex;
+    justify-content:space-around;
+}
+
+.item__table{
+    width:290px;
+    height:320px;
+    
+}
+
+.item__table__pic{
+    height:290px;
+    width:290px;
+
+}
+
+.item__table__pic img{
+    height:100%;
+    width:100%;
+    background-size:cover;
+}
+
+.item__table__name{
+    font-size:25px;
+    height:30px;
+    display:flex;
+    align-items:center;
+}
