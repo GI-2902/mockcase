@@ -58,7 +58,7 @@
                     {{ $item->brand }}
                 </div>
                 <div class="product__area__title-price">
-                    ￥{{ $item->price }}(税込み)
+                    ￥{{ $item->price }}(税込)
                 </div>
 
                 @php
