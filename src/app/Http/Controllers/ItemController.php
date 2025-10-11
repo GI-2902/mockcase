@@ -14,6 +14,8 @@ class ItemController extends Controller
 
         $items = DB::table('items')->get();
 
+        //dd($items);
+
         return view('index', compact('items'));
     }
 

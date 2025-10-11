@@ -31,7 +31,7 @@ Route::get('/mypage/profile', function () {
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/', [UserController::class, 'index']);
+    Route::get('/', [ItemController::class, 'index']);
 });
 
 Route::middleware('auth')->group(function () {
