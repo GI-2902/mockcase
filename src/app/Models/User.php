@@ -11,4 +11,7 @@ class User extends Authenticatable
     use HasFactory;
     protected $fillable = ['email', 'password', 'user_name', 'user_image', 'postcode', 'address', 'building'];
     protected $guarded = ['id'];
+
+    //これがないとupdate_atがないというエラー(column not found)が発生する
+    public $timestamps = false;
 }
