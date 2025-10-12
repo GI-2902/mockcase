@@ -63,18 +63,19 @@
 
                 @php
 
-                $user = auth()->user();
-                $isLiked = $user && $user->likes->contains($post->id);
+                /*$user = auth()->user();
+                $isLiked = $user && $user->likes->contains($post->id);*/
 
                 @endphp
+                
 
                 <div class="product__area__title-action">
 
                     <form action="{{ route('item',$item->item_id) }}" method="post">
                         @csrf
-                        <button type="submit"> {{ $isLiked ? '★' : '☆'}} </button>
+                        <button type="submit">☆ <!-- $isLiked ? '★' : '☆'}} --></button>
                     </form>
-                    <span>{{ $item->likes()->count() }}</span>
+                    <span> <!--  $item->likes()->count()}}--></span>
 
                 </div>
 

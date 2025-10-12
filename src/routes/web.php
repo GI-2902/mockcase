@@ -31,11 +31,13 @@ Route::get('/mypage/profile', function () {
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/', [ItemController::class, 'index']);
+    Route::post('/', [ItemController::class, 'index']);
 });
 
 Route::middleware('auth')->group(function () {
-    Route::post('/', [UserController::class, 'create']);
+    Route::get('/', [ItemController::class, 'index']);
 });
+
+
 
 Route::get('/item', [ItemController::class, 'show'])->name('item');

@@ -74,7 +74,7 @@ return [
     |
     */
 
-    'home' => '', //ログイン後のリダイレクト先
+    'home' => '/', //ログイン後のリダイレクト先
 
     /*
     |--------------------------------------------------------------------------
@@ -147,14 +147,14 @@ return [
     'features' => [
         Features::registration(), //登録機能
         Features::resetPasswords(), //パスワードリセット
-        // Features::emailVerification(),　　//メール認証
+        Features::emailVerification(), //メール認証
         Features::updateProfileInformation(), //登録情報の更新
         Features::updatePasswords(), //パスワードの更新
-        Features::twoFactorAuthentication([ //2段階認証
-            'confirm' => true,
-            'confirmPassword' => true,
-            // 'window' => 0,
-        ]),
+        //Features::twoFactorAuthentication([ //2段階認証
+        //'confirm' => true,
+        //'confirmPassword' => true,
+        //'window' => 0,
     ],
+
 
 ];
