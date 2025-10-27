@@ -9,10 +9,6 @@ class Like extends Model
 {
     use HasFactory;
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 
     //1人のユーザーが多くのpostをする
     public function posts()

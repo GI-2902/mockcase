@@ -3,35 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use app\Models\Like;
-use app\Models\Post;
+use app\models\Post;
+use app\models\Like;
+use Illuminate\support\facades\auth;
 
 class LikeController extends Controller
 {
-
     //いいね機能
-    public function likePost(Post $post)
+    public function toggle(Post $post)
     {
-        //現在ログインしているユーザーのID取得
-        $user_id = Auth::id();
 
-        $liked_post = $post->likes()->where('user_id', $user_id);
+        if (Auth::check()) {
 
-        if (!$liked_post->exists()) {
+            $user = Auth::user();
 
-            //laravelは「Like」インスタンスで「Likes」テーブルが操作できる
-            $like = new Like();
-            $like->user_id = $user_id;
-            $like->post_id = $post->id;
-            $like->save();
-        } else {
-            $liked_post->delete();
+            $Isliked = $user->likes->where('post_id', $post->id);
+
+            if (!$Isliked->exists()) {
+
+                $like = new Like();
+                $like->post_id = $post->post_id;
+                $like->item_id = $post->item_id;
+                $like->id = $user->id;
+                $like->save();
+            } else {
+
+                $Isliked->delete();
+            }
         }
 
-        //likesテーブル?を呼び出していいねpostの数をカウント
-        $likes_count = $post->likes->count();
-
-        return (string) $likes_count;
+        return back();
     }
 }

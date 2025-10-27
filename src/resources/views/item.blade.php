@@ -60,22 +60,17 @@
                 <div class="product__area__title-price">
                     ￥{{ $item->price }}(税込み)
                 </div>
-
-                @php
-
-                /*$user = auth()->user();
-                $isLiked = $user && $user->likes->contains($post->id);*/
-
-                @endphp
                 
+
+
 
                 <div class="product__area__title-action">
 
-                    <form action="{{ route('item',$item->item_id) }}" method="post">
+                  {{-- <form action="{{ route('post.like',$post->$item->item_id) }}" method="post">
                         @csrf
-                        <button type="submit">☆ <!-- $isLiked ? '★' : '☆'}} --></button>
+                        <button type="submit">●</button>
                     </form>
-                    <span> <!--  $item->likes()->count()}}--></span>
+                    <span></span>--}}
 
                 </div>
 
@@ -83,7 +78,9 @@
             </div>
             <div class="product__buy">
                 <div class="product__buy-button">
-                    <input type="text" value="購入手続きへ" href="/item">
+                
+                        <a href="{{ route('buy',['item_id' => $item->item_id])}}"  class="product__buy-button-tag">購入手続きへ</a>
+                    
                 </div>
             </div>
             <div class="product__descri">
@@ -91,7 +88,7 @@
                     商品説明
                 </div>
                 <div class="product__descri-text">
-                    内容
+                    {{ $item->description }}
                 </div>
             </div>
             <div class="product__info">
@@ -99,15 +96,25 @@
                     商品の情報
                 </div>
                 <div class="product__info-category">
-                    カテゴリー
+                    <div class="product__info-category-title">
+                          カテゴリー  
+                    </div>
+                    <div class="product__info-category-text">
+                         {{ $item->category}}
+                    </div>      
                 </div>
                 <div class="product__info-status">
-                    商品の状態
+                   <div class="product__info-status-title">
+                        商品の状態 
+                   </div>
+                   <div class="product__info-status-text">
+                         {{ $item->status}}
+                   </div>       
                 </div>
             </div>
             <div class="product__comment">
                 <div class="product__comment-num">
-                    コメント
+                    コメント({{----}})
                 </div>
                 <div class="product__comment-list">
 
@@ -120,7 +127,7 @@
                         <textarea name="" id=""></textarea>
                     </div>
                     <div class="product__comment-input-button">
-                        <input type="text" value="コメントを送信する">
+                        <input type="submit" value="コメントを送信する">
                     </div>
                 </div>
             </div>

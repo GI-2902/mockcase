@@ -16,9 +16,9 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'id' => '10',
+            'id' => '1',
             'user_name' => 'ope01',
-            'email' => 'a@gmail.com',
+            'email' => '1@gmail.com',
             //laravelではパスワードはハッシュ化して保存される
             'password' => Hash::make('password'),
             'postcode' => '9999999',
@@ -28,9 +28,42 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert($param);
 
         $param = [
-            'id' => '20',
+            'id' => '2',
             'user_name' => 'ope02',
-            'email' => 'b@gmail.com',
+            'email' => '2@gmail.com',
+            'password' => Hash::make('password'),
+            'postcode' => '0000000',
+            'address' => '米花町',
+            'building' => 'ハイドシティホテル屋上',
+        ];
+
+        DB::table('users')->insert($param);
+        $param = [
+            'id' => '3',
+            'user_name' => 'ope03',
+            'email' => '3@gmail.com',
+            'password' => Hash::make('password'),
+            'postcode' => '0000000',
+            'address' => '米花町',
+            'building' => 'ハイドシティホテル屋上',
+        ];
+
+        DB::table('users')->insert($param);
+        $param = [
+            'id' => '4',
+            'user_name' => 'ope04',
+            'email' => '4@gmail.com',
+            'password' => Hash::make('password'),
+            'postcode' => '0000000',
+            'address' => '米花町',
+            'building' => 'ハイドシティホテル屋上',
+        ];
+        DB::table('users')->insert($param);
+
+        $param = [
+            'id' => '5',
+            'user_name' => 'ope05',
+            'email' => '5@gmail.com',
             'password' => Hash::make('password'),
             'postcode' => '0000000',
             'address' => '米花町',

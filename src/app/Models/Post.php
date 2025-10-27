@@ -9,9 +9,15 @@ class Post extends Model
 {
     use HasFactory;
 
-    //1つのpostに無数のユーザーがいいねする
+    public function users()
+    {
+        //1つのpostは1人のユーザーに紐づく
+        return $this->belongsTo(User::class);
+    }
+
     public function likes()
     {
-        return $this->hasMany(User::class);
+        //1つのpostは複数のいいねを得る
+        return $this->belongsToMany(User::class);
     }
 }

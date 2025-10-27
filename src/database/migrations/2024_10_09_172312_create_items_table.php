@@ -20,7 +20,7 @@ class CreateItemsTable extends Migration
             $table->string('item_image');
             $table->string('brand');
             $table->bigInteger('price');
-            $table->integer('category_id');
+            $table->string('category');
             $table->string('status');
             $table->string('description');
         });
