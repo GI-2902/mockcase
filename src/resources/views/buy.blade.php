@@ -46,7 +46,7 @@
             <div class="item_buy_info">
 
                 <div class="item_buy_info-pic">
-                    商品画像
+                    <img src="{{asset('image/'. $item->item_image)}}" alt="">
                 </div>
                 <div class="item_buy_info-text">
                     <div class="item_buy_info-text-title">
@@ -60,15 +60,25 @@
             </div>
 
             <div class="item_buy_pay">
-                <div class="item_pay_title"></div>
-                <div class="item_pay_howto"></div>
+                <div class="item_buy_pay-title">
+                    支払い方法
+                </div>
+                <div class="item_buy_pay-howto">
+                    <select name="pay" id="pay">
+                        <option value="convi">コンビニ払い</option>
+                        <option value="card">カード支払い</option>
+                    </select>
+                </div>
 
             </div>
 
             <div class="item_buy_send">
-
-                <div  class="item_send"></div>
-                <div class="item_send_address"></div>
+                <div class="item_buy_send-group">
+                    <div  class="item_buy_send-group-title">配送先</div>
+                    <div class="item_buy_send-group-confirm">変更する</div>
+                </div>
+                
+                <div class="item_buy_send_address">〒xxx</div>
             </div>
 
         </div>
