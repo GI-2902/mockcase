@@ -14,7 +14,7 @@
     margin-left:40px;
     width:370px;
     height:36px;
-    background-image:url('../image/logo.svg');
+    background-image:url('../storage/image/logo.svg');
     background-repeat:no-repeat;
 }
 
@@ -175,8 +175,78 @@
 }
 
 .item_conf{
-    border:2px solid brown;
-    width:469px;
-    height:440px;
+    width:440px;
     margin-top:93px;
+}
+
+.item_conf_pay{
+    border:2px solid black;
+    width:440px;
+}
+
+.item_conf_pay_price{
+    border:2px solid yellowgreen;
+    height:115px;
+    display:flex;
+}
+
+.item_conf_pay_price-title{
+    border:2px solid green;
+    height:115px;
+    width:220px;
+    font-size:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.item_conf_pay_price-nummber{
+    border:2px solid green;
+    height:115px;
+    width:220px;
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.item_conf_pay_howto{
+    border:2px solid silver;
+    height:115px;
+    display:flex;
+}
+
+.item_conf_pay_howto-title{
+    border:2px solid silver;
+    height:115px;
+    width:220px;
+    font-size:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.item_conf_pay_howto-select{
+    height:115px;
+    width:220px;
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.item_conf_button {
+    height:60px;
+    margin-top:66px;
+}
+
+.item_conf_button a{
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    font-weight:bold;
+    background-color: #ff5555;
+    border-radius: 5px;
 }

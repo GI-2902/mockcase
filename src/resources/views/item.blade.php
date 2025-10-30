@@ -44,7 +44,7 @@
 
         <div class="product__img">
             <div class="product__img__pic">
-                <img src="{{ asset('image/'.$item->item_image) }}" alt="">
+                <img src="{{ asset('storage/image/'.$item->item_image) }}" alt="">
             </div>
         </div>
 

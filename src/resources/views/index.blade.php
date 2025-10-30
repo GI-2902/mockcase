@@ -57,7 +57,7 @@
             @foreach($items as $item)
             <div class="item__table">
                 <div class="item__table__pic">
-                    <img src="{{ asset('image/'.$item->item_image) }}">
+                    <img src="{{ asset('storage/image/'.$item->item_image) }}">
                 </div>
                 <div class="item__table__name">
                     <a href="{{ route('item',['item_id' => $item->item_id]) }}">{{ $item->item_name }} </a>

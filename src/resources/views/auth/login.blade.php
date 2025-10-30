@@ -11,12 +11,13 @@
 </head>
 
 <body>
-    <header class="auth__header">
-        <div class="auth__header__inner">
-            <a class="auth__header__logo" href="/">
-                COACHTECH
-            </a>
+    <header class="header">
+
+        <div class="header__inner">
+            <div class="header__inner__logo">
+            </div>
         </div>
+
     </header>
 
     <form action="/login" class="" method="post">
