@@ -29,6 +29,8 @@ Dockerビルド
 
 ・会員登録画面:http://localhost/register
 
+・プロフィール編集画面:http://localhost/mypage/profile
+
 ・商品一覧画面(トップ画面):http://localhost/
 
 ・商品詳細画面:http://localhost/item/{item_id}

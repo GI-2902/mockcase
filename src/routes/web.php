@@ -45,4 +45,6 @@ Route::middleware('auth')->group(function () {
 
 Route::post('/item/{post}', [PostController::class, 'favorite'])->name('post.like');
 
-Route::get('/item', [ItemController::class, 'show'])->name('item');
+Route::middleware('auth')->group(function () {
+    Route::get('/item', [ItemController::class, 'show'])->name('item');
+});
