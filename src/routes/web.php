@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PostController;
 
@@ -42,9 +41,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/purchase', [ItemController::class, 'buy'])->name('buy');
 });
 
+Route::get('/item', [ItemController::class, 'show'])->name('item');
 
 Route::post('/item/{post}', [PostController::class, 'favorite'])->name('post.like');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/item', [ItemController::class, 'show'])->name('item');
-});

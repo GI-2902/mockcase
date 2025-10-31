@@ -4,15 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
-//DBファサードを使用する
-use Illuminate\Support\Facades\DB;
+
 use Illuminate\Support\Facades\Auth;
+use app\Models\User;
 
 
 class ItemController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+
+        $form = $request->all();
+        //model名
+        User::create($form);
+
         $id = Auth::id();
 
         $items = Item::where('id', $id)->get();
