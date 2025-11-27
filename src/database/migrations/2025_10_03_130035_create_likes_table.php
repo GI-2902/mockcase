@@ -16,9 +16,9 @@ class CreateLikesTable extends Migration
         Schema::create('likes', function (Blueprint $table) {
             $table->id('post_id');
             $table->foreignId('item_id')->references('item_id')->on('items')->onDelete('cascade');
-            $table->foreignId('id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->unique(['id', 'post_id']);
+            $table->unique(['user_id', 'item_id']);
         });
     }
 

@@ -1,45 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    @section('css')
     <link rel="stylesheet" href="{{asset('css/item.css')}}">
+    @endsection
+    @section('title')
     <title>商品詳細画面-ログイン後-</title>
-</head>
+    @endsection
 
-<body>
-    <header class="header">
-
-        <div class="header__inner">
-            <div class="header__inner__logo">
-            </div>
-            @Auth
-            <div class="header__inner__text">
-                <input type="text" value="   なにをお探しですか？">
-            </div>
-            <div class="header__inner__menu">
-                <div class="header__inner__menu-logout">
-                    <form action="/logout" method="post" class="header__inner__menu-logout-form">
-                        @csrf
-                        <input type="submit" value="ログアウト" />
-                    </form>
-
-                </div>
-                <div class="header__inner__menu-mypage">
-                    マイページ
-                </div>
-                <div class="header__inner__menu-listing">
-                    <input type="submit" value="出品">
-                </div>
-            </div>
-            @endauth
-        </div>
-
-    </header>
-
-
+    @section('content')
     <div class="product">
 
         <div class="product__img">
@@ -58,24 +26,28 @@
                     {{ $item->brand }}
                 </div>
                 <div class="product__area__title-price">
-                    ￥{{ $item->price }}(税込み)
+                    ￥{{ $item->price }}(税込)
                 </div>
                 
-
-
-
-                <div class="product__area__title-action">
-
-                  {{-- <form action="{{ route('post.like',$post->$item->item_id) }}" method="post">
+                <form action="{{'/like/'.$item->item_id }}" method="post" class="product__area__title-form">
                         @csrf
-                        <button type="submit">●</button>
-                    </form>
-                    <span></span>--}}
+                        <div class="product__area__title-form-like">
+                            <button type="submit" class="product__area__title-form-like-button">
+                                <img src="{{ $check_like ? asset('storage/image/heart.jpg') : asset('storage/image/nonheart.jpg')}}" alt="">
+                            </button>
+                            <a class="product__area__title-form-like-count">{{$like_count}}</a>
+                        </div>
 
-                </div>
-
-
+                        <div class="product__area__title-form-comment">
+                            <div class="product__area__title-form-comment-button">
+                                <img src="{{ $check_comment ? asset('storage/image/comment.jpg') : asset('storage/image/noncomment.jpg')}}" alt="">
+                            </div>
+                            <a class="product__area__title-form-comment-count">{{$comment_count}}</a>
+                        </div>
+                        
+                </form>
             </div>
+
             <div class="product__buy">
                 <div class="product__buy-button">
                 
@@ -114,28 +86,45 @@
             </div>
             <div class="product__comment">
                 <div class="product__comment-num">
-                    コメント({{----}})
+                    コメント{{'('.$comment_count.')'}}
                 </div>
-                <div class="product__comment-list">
+                <div class="product__comment-user">
+
+
+                    @foreach($comments as $comment)
+                    <div class="product__comment-user-info">
+                        <div class="product__comment-user-info-img">
+                            <img src="{{asset('storage/image/'.$comment->user_image)}}" class="product__comment-user-info-img-pic" alt="">
+                        </div>
+                        <div class="product__comment-user-info-name">
+                            {{ $comment->user_name }}
+                        </div>
+                    </div>
+                    <div class="product__comment-user-comment">
+                        <input type="text" value="{{ $comment->comment }}" class="product__comment-user-comment-text">
+                    </div>
+                    @endforeach
+
+
 
                 </div>
                 <div class="product__comment-input">
                     <div class="product__comment-input-title">
                         商品へのコメント
                     </div>
-                    <div class="product__comment-input-area">
-                        <textarea name="" id=""></textarea>
-                    </div>
-                    <div class="product__comment-input-button">
-                        <input type="submit" value="コメントを送信する">
-                    </div>
+
+                    <form action="{{'/comment/'.$item->item_id }}" method="post" class="product__comment-input-form">
+                        @csrf
+                        <textarea name="come" class="product__comment-input-form-text">{{$item->comment}}</textarea>
+
+                        <input type="submit" value="コメントを送信する" class="product__comment-input-form-button">
+                        
+                    </form>                    
                 </div>
             </div>
         </div>
 
     </div>
+    @endsection
 
 
-</body>
-
-</html>

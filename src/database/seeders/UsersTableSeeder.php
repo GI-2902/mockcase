@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'id' => '1',
             'user_name' => 'ope01',
+            'user_image' => 'youngman_25.png',
             'email' => '1@gmail.com',
             //laravelではパスワードはハッシュ化して保存される
             'password' => Hash::make('password'),
@@ -30,6 +31,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'id' => '2',
             'user_name' => 'ope02',
+            'user_image' => 'youngman_27.png',
             'email' => '2@gmail.com',
             'password' => Hash::make('password'),
             'postcode' => '0000000',
@@ -41,6 +43,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'id' => '3',
             'user_name' => 'ope03',
+            'user_image' => 'youngman_29.png',
             'email' => '3@gmail.com',
             'password' => Hash::make('password'),
             'postcode' => '0000000',
@@ -52,6 +55,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'id' => '4',
             'user_name' => 'ope04',
+            'user_image' => 'youngman_34.png',
             'email' => '4@gmail.com',
             'password' => Hash::make('password'),
             'postcode' => '0000000',
@@ -63,6 +67,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'id' => '5',
             'user_name' => 'ope05',
+            'user_image' => 'youngman_35.png',
             'email' => '5@gmail.com',
             'password' => Hash::make('password'),
             'postcode' => '0000000',

@@ -1,44 +1,14 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    @section('css')
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
-    <title>商品一覧画面(トップ画面)</title>
-</head>
+    @endsection
+    @section('title')
+    <title>商品一覧画面-ログイン後-</title>
+    @endsection
 
-<body>
-    <header class="header">
-
-        <div class="header__inner">
-            <div class="header__inner__logo">
-            </div>
-            @Auth
-            <div class="header__inner__text">
-                <input type="text" value="   なにをお探しですか？">
-            </div>
-            <div class="header__inner__menu">
-                <div class="header__inner__menu-logout">
-                    <form action="/logout" method="post" class="header__inner__menu-logout-form">
-                        @csrf
-                        <input type="submit" value="ログアウト" />
-                    </form>
-
-                </div>
-                <div class="header__inner__menu-mypage">
-                    マイページ
-                </div>
-                <div class="header__inner__menu-listing">
-                    <input type="submit" value="出品">
-                </div>
-            </div>
-            @endauth
-        </div>
-
-    </header>
-
+    
+    @section('content')
     <div class="toplist">
         <div class="toplist__tag">
             <div class="toplist__tag-reco">
@@ -67,7 +37,4 @@
 
         </div>
     </form>
-
-</body>
-
-</html>
+    @endsection

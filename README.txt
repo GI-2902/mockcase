@@ -17,8 +17,8 @@ Dockerビルド
 暗号化のためのキーを生成
 ・php artisan key:generate
 
-マイグレーションファイルの作成
-・php artisan migrate
+マイグレーションファイルの作成と実行
+・php artisan migrate:fresh
 
 シーディング
 ・php artisan db:seed

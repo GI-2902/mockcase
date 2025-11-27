@@ -3,35 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\models\Post;
-use app\models\Like;
+use App\Models\Like;
 use Illuminate\support\facades\auth;
 
 class LikeController extends Controller
 {
     //いいね機能
-    public function toggle(Post $post)
+    public function toggle(Request $request)
     {
 
-        if (Auth::check()) {
+        $user = Auth::user();
 
-            $user = Auth::user();
+        $check_like = Like::where('user_id', $user->id)->where('item_id', $request->item_id)->exists();
+        //dd($request);
+        if (!$check_like) {
 
-            $Isliked = $user->likes->where('post_id', $post->id);
+            $like = new Like();
+            $like->item_id = $request->item_id;
+            $like->user_id = $user->id;
+            //dd($like);
+            $like->save();
+        } else {
 
-            if (!$Isliked->exists()) {
-
-                $like = new Like();
-                $like->post_id = $post->post_id;
-                $like->item_id = $post->item_id;
-                $like->id = $user->id;
-                $like->save();
-            } else {
-
-                $Isliked->delete();
-            }
+            //getだと複数のmodelを格納するcollectionクラスになるのでforeachで1つに取り出す
+            Like::where('user_id', $user->id)->where('item_id', $request->item_id)->delete();
         }
 
-        return back();
+        $count = Like::count();
+        //dd($count);
+        return back()->with('count', $count)->with('check_like', $check_like);
     }
 }

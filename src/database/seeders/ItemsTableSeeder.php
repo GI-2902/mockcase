@@ -21,9 +21,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'ArmaniMensClock.jpg',
             'brand' => 'Rolax',
             'price' => '15000',
-            'category' => '腕時計',
             'status' => '普通',
             'description' => 'スタイリッシュなデザインのメンズ腕時計',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -34,9 +34,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'HDDHardDisk.jpg',
             'brand' => '西芝',
             'price' => '5000',
-            'category' => '家電',
             'status' => '不良品',
             'description' => '高速で信頼性の高いハードディスク',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -47,9 +47,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'iLoveIMGd.jpg',
             'brand' => 'なし',
             'price' => '300',
-            'category' => '野菜',
             'status' => '超最高',
             'description' => '新鮮な玉ねぎ3束のセット',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -60,9 +60,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'LeatherShoesProductPhoto.jpg',
             'brand' => '',
             'price' => '4000',
-            'category' => '靴',
             'status' => '悪い',
             'description' => 'クラシックなデザインの革靴',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -73,9 +73,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'LivingRoomLaptop.jpg',
             'brand' => '',
             'price' => '45000',
-            'category' => '家電',
             'status' => '普通',
             'description' => '高性能なノートパソコン',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -86,9 +86,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'MusicMic4632231.jpg',
             'brand' => 'なし',
             'price' => '8000',
-            'category' => '楽器',
             'status' => '普通',
             'description' => '高音質のレコーディング用マイク',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -99,9 +99,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'Pursefashionpocket.jpg',
             'brand' => '',
             'price' => '3500',
-            'category' => 'バッグ',
             'status' => '普通',
             'description' => 'おしゃれなショルダーバッグ',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -112,9 +112,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'Tumblersouvenir.jpg',
             'brand' => 'なし',
             'price' => '500',
-            'category' => '食器',
             'status' => '悪い',
             'description' => '使いやすいタンブラー',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -125,9 +125,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'WaitresswithCoffeeGrinder.jpg',
             'brand' => 'starbacks',
             'price' => '4000',
-            'category' => '器具',
             'status' => '悪い',
             'description' => '手動のコーヒーミル',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
 
@@ -138,9 +138,9 @@ class ItemsTableSeeder extends Seeder
             'item_image' => 'make.jpg',
             'brand' => '',
             'price' => '2500',
-            'category' => '化粧品',
             'status' => '良好',
             'description' => '便利なメイクアップセット',
+            'comment' => '',
         ];
         DB::table('items')->insert($param);
     }

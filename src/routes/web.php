@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\LikeController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +43,14 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/item', [ItemController::class, 'show'])->name('item');
 
-Route::post('/item/{post}', [PostController::class, 'favorite'])->name('post.like');
+Route::post('/like/{item_id}', [LikeController::class, 'toggle']);
+
+Route::post('/comment/{item_id}', [CommentController::class, 'comment']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/sell', [ItemController::class, 'sell'])->name('sell');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/sell/{category_name}', [ItemController::class, 'category_check'])->name('category');
+});

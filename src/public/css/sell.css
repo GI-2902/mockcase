@@ -1,0 +1,215 @@
+.sell{
+    display:flex;
+    flex-direction:column;
+    height:1715px;
+    margin:0 auto;
+    width:680px;
+}
+
+.sell_title{
+    width:280px;
+    height:44px;
+    font-size:36px;
+    font-weight:bold;
+    margin: 0 auto;
+    margin-top:51px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.sell_image{
+    margin-top:106px;
+    width:100%;
+    height:186px;
+    display:flex;
+    flex-direction: column;
+}
+
+.sell_image_title{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.sell_image_pic{
+    height:150px;
+    width:100%;
+    border:1px dotted #5f5f5f;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.sell_image_pic label{
+    width:165px;
+    height:43.65px;
+    border:2px solid #ff5555;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    color:#ff5655;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.sell_image_pic input{
+    width:100%;
+    display:none;
+}
+
+.sell_status{
+    margin-top:70px;
+    width:680px;
+    height:477px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.sell_status-title{
+    height:48px;
+    font-size:30px;
+    font-weight:bold;
+    border-bottom:1px solid #5f5f5f;
+}
+
+.sell_status-category{
+    height:235px;
+}
+
+.sell_status-category-title{
+    height:36px;
+    width:162.09px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.sell_status-category-tag {
+    height:199px;
+}
+
+.sell_status-category-tag ul{
+    display:inline-block;
+}
+
+.sell_status-category-tag a{
+    border:2px solid #ff5655;
+    border-radius: 200px;
+    margin-left:15px;
+    margin-top:20px;
+    float:left;
+    list-style:none;
+    height:32px;
+    font-size:15px;
+    padding:3px 10px;
+    text-align:center;
+    color:#ff5655;
+    text-decoration:none;
+}
+
+.sell_status-type{
+    height:93px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.sell_status-type-title{
+    font-size:24px;
+    font-weight:bold;
+    height:29px;
+}
+
+.sell_status-type-select{
+    height:45px;
+}
+
+.sell_text{
+    height:46px;
+    font-size:30px;
+    font-weight:bold;
+    border-bottom:1px solid #5f5f5f;
+    margin-top:69px;
+}
+
+.sell_name{
+    height:81px;
+    margin-top:36px;
+}
+
+.sell_name-title{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.sell_name-input{
+    height:45px;
+    width:100%;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.sell_brand{
+    height:81px;
+    margin-top:36px;
+}
+
+.sell_brand-title{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.sell_brand-input{
+    height:45px;
+    width:100%;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.sell_descri{
+    height:81px;
+    margin-top:36px;
+}
+
+.sell_descri-title{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.sell_descri-input{
+    height:45px;
+    width:100%;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.sell_price{
+    height:81px;
+    margin-top:36px;
+}
+
+.sell_price-title{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.sell_price-input{
+    height:45px;
+    width:100%;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.sell_button{
+    height:60px;
+    width:100%;
+    margin-top:118px;
+    background-color: #ff5555;
+    border:none;
+    border-radius:5px;
+    font-size:26px;
+    font-weight:bold;
+    color:#ffffff;
+}

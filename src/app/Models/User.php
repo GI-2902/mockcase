@@ -15,15 +15,15 @@ class User extends Authenticatable
     //これがないとupdate_atがないというエラー(column not found)が発生する
     public $timestamps = false;
 
-    public function posts()
+    public function items()
     {
-        //1人のuserは複数のpostを投稿する
-        $this->hasMany(Post::class);
+        //1人のuserは複数のitemを持つ
+        $this->hasMany(Item::class);
     }
 
     public function likes()
     {
         //1人userは複数のpostにlikeする
-        $this->belongsToMany(Post::class);
+        $this->hasMany(Like::class);
     }
 }
